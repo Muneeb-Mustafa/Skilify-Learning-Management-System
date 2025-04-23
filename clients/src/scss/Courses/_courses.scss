@@ -1,0 +1,132 @@
+ .breadcrumb {
+  padding: 20px 50px;
+  background-color: #eef4fa;
+  color: #282938;
+}
+
+.searchContainer {
+  input::placeholder {
+    color: #282938 !important;
+  }
+}
+
+.courses-container {
+  padding: 50px 0;
+  min-height: 60vh;
+}
+
+.loading-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+
+  .ant-spin-dot-item {
+    background-color: #1c1e53 !important;
+  }
+
+  .ant-spin-text {
+    color: #1c1e53 !important;
+    font-weight: 500;
+    font-size: 18px;
+  }
+}
+
+.ant-input-search-button {
+  background-color: #1c1e53 !important;
+  border-color: #1c1e53 !important;
+}
+
+.custom-pagination {
+  .ant-pagination-item-active {
+    background-color: #fcdc66 !important;
+    border-color: #fcdc66 !important;
+
+    a {
+      color: white !important;
+    }
+  }
+
+  .ant-pagination-item {
+    background-color: #f8f9fa;
+    border-color: #f8f9fa;
+
+    a {
+      color: #6c757d;
+    }
+
+    &:hover {
+      border-color: #fcdc66 !important;
+    }
+  }
+}
+
+.course-card {
+  .card-image-wrapper {
+    position: relative;
+
+    .price-badge {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background-color: #1c1e53;
+      color: white;
+      font-size: 14px;
+      padding: 5px 10px;
+      border-radius: 4px;
+    }
+  }
+
+  .course-description {
+    color: #6c757d;
+    margin-bottom: 1rem;
+
+    .read-more-btn {
+      background: none;
+      border: none;
+      padding: 0;
+      margin-left: 5px;
+      color: #1c1e53;
+      font-size: 14px;
+      cursor: pointer;
+
+      &:hover {
+        color: #4346de;
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .instructor {
+    margin-bottom: 1rem;
+    color: #282938;
+  }
+
+  .course-stats {
+    display: flex;
+    justify-content: space-between;
+    color: #282938;
+
+    .stat-icon {
+      padding-right: 5px;
+      font-size: 20px;
+      vertical-align: middle;
+    }
+  }
+}
+
+.no-results {
+  color: #282938;
+}
+
+.pagination-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+@media (max-width: 768px) {
+  .searchContainer.w-50.mx-auto.pt-4.pb-4 {
+    width: 90% !important;
+  }
+}

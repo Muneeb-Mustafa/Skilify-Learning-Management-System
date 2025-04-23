@@ -1,0 +1,79 @@
+/* Breadcrumbs styling */
+.breadcrumbs {
+    padding: 15px 20px;
+    background-color: #165ba0;
+    color: #282938;
+  }
+  
+  /* Make tabs responsive */
+  .course-tabs .ant-tabs-nav {
+    width: 100%;
+    overflow-x: auto;
+  }
+  
+  .course-tabs .ant-tabs-tab {
+    white-space: nowrap;
+    margin-right: 10px;
+  }
+  
+  /* Card hover effect */
+  .card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1) !important;
+  }
+  
+  /* Custom responsive styles */
+  @media (max-width: 991px) {
+    /* Adjust spacing for mobile */
+    .container {
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+    
+    /* Adjust font sizes for mobile */
+    h3.fw-bold {
+      font-size: 1.5rem;
+    }
+    
+    h2.fw-bold {
+      font-size: 1.8rem;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    /* Further adjustments for very small screens */
+    .list-group-item {
+      padding: 10px;
+    }
+    
+    /* Simplify tabs on small screens */
+    .course-tabs .ant-tabs-tab {
+      padding: 8px 12px;
+    }
+    
+    /* Adjust font sizes for very small screens */
+    h3.fw-bold {
+      font-size: 1.4rem;
+    }
+    
+    h2.fw-bold {
+      font-size: 1.6rem;
+    }
+    
+    /* Full width card on very small screens */
+    .card {
+      margin-bottom: 20px;
+    }
+  }
+  
+  /* Make enrollment card sticky on desktop */
+  @media (min-width: 992px) {
+    .sticky-lg-top {
+      position: sticky;
+      top: 20px;
+    }
+  }

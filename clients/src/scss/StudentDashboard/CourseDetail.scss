@@ -1,0 +1,306 @@
+.course-detail-container {
+    container: mt-4 mb-4;
+    
+    .course-breadcrumb {
+      margin-top: 1rem;
+    }
+    
+    .course-content {
+      margin-top: 1.5rem;
+      
+      // For mobile view - change the flex order
+      @media (max-width: 991px) {
+        .row {
+          display: flex;
+          flex-direction: column;
+        }
+        
+        .col-12.col-lg-4 {
+          order: -1; // This moves the card to the top on mobile
+          margin-bottom: 1.5rem;
+        }
+      }
+      
+      .course-header {
+        .course-title {
+          font-weight: bold;
+          color: #1C1E53;
+          font-size: 28px;
+        }
+        
+        .course-subtitle {
+          color: #6E6E6E;
+          font-size: 16px;
+        }
+      }
+      
+      .course-structure-card {
+        margin-top: 1rem;
+        padding: 1rem;
+        background: #fff;
+        border-radius: 8px;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        
+        .card-title {
+          color: #1C1E53;
+          font-size: 18px;
+          margin-bottom: 1rem;
+        }
+        
+        .chapter-container {
+          margin-top: 1rem;
+          
+          .chapter-select {
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            width: 100%;
+            padding: 0.5rem;
+            background-color: #f8f9fa;
+          }
+          
+          .chapter-info {
+            font-size: 14px;
+            color: #666;
+            margin-top: 10px;
+          }
+          
+          .lecture-list {
+            list-style: none;
+            padding-left: 0;
+            margin-top: 0.5rem;
+            
+            .lecture-item {
+              border: 1px solid #ddd;
+              border-radius: 4px;
+              margin-bottom: 5px;
+              background: #f8f9fa;
+              padding: 0.5rem;
+              
+              // Responsive layout for lecture items
+              display: flex;
+              flex-direction: column;
+              
+              @media (min-width: 768px) {
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+              }
+              
+              .lecture-info {
+                margin-bottom: 0.5rem;
+                
+                @media (min-width: 768px) {
+                  margin-bottom: 0;
+                }
+                
+                .lecture-title {
+                  color: #007bff;
+                  text-decoration: none;
+                  cursor: pointer;
+                  
+                  &:hover {
+                    text-decoration: underline;
+                  }
+                }
+              }
+              
+              .btn-mark-complete, .btn-completed {
+                padding: 4px 12px;
+                font-size: 12px;
+                color: white;
+                border: none;
+              }
+              
+              .btn-mark-complete {
+                background-color: #007bff;
+                
+                &:hover {
+                  background-color: darken(#007bff, 10%);
+                }
+              }
+              
+              .btn-completed {
+                background-color: #28a745;
+                
+                &:hover {
+                  background-color: darken(#28a745, 10%);
+                }
+              }
+            }
+          }
+        }
+      }
+      
+      .rating-section {
+        margin-top: 1.5rem;
+        
+        .section-title {
+          color: #1C1E53;
+          font-size: 18px;
+          margin-bottom: 0.5rem;
+        }
+        
+        .course-rating {
+          font-size: 20px;
+          color: #f5c518;
+        }
+      }
+      
+      .course-tabs {
+        margin-top: 1.5rem;
+        background: #fff;
+        border-radius: 8px;
+        padding: 1rem;
+        
+        // Make tabs responsive
+        :global(.ant-tabs-nav) {
+          margin-bottom: 1rem;
+          flex-wrap: wrap;
+        }
+        
+        .tab-title {
+          color: #1C1E53;
+          font-size: 18px;
+          margin-bottom: 0.5rem;
+        }
+        
+        .tab-content {
+          color: #666;
+          font-size: 16px;
+        }
+        
+        .curriculum-chapter {
+          margin-bottom: 1rem;
+          
+          .curriculum-lectures {
+            list-style: none;
+            padding-left: 20px;
+            
+            .curriculum-lecture {
+              color: #666;
+              margin: 5px 0;
+            }
+          }
+        }
+      }
+      
+      .course-info-card {
+        background: #fff;
+        border-radius: 8px;
+        border: 1px solid #ddd;
+        overflow: hidden;
+        margin-bottom: 1.5rem;
+        
+        @media (min-width: 992px) {
+          position: sticky;
+          top: 20px;
+        }
+        
+        .course-thumbnail {
+          width: 100%;
+          object-fit: cover;
+          border-bottom: 1px solid #ddd;
+        }
+        
+        .card-body {
+          padding: 1rem;
+          
+          .card-course-title {
+            font-weight: bold;
+            color: #1C1E53;
+            font-size: 20px;
+            margin-bottom: 0.5rem;
+          }
+          
+          .card-price {
+            color: #000;
+            font-weight: bold;
+            font-size: 24px;
+            margin-bottom: 0.5rem;
+          }
+          
+          .card-details {
+            color: #6E6E6E;
+            font-size: 14px;
+            margin-bottom: 1rem;
+          }
+          
+          .btn-mark-course-complete, .btn-course-completed {
+            width: 100%;
+            margin-top: 1rem;
+            padding: 8px 0;
+            font-size: 16px;
+            border: none;
+          }
+          
+          .btn-mark-course-complete {
+            background-color: #007bff;
+            
+            &:hover {
+              background-color: darken(#007bff, 10%);
+            }
+          }
+          
+          .btn-course-completed {
+            background-color: #28a745;
+            
+            &:hover {
+              background-color: darken(#28a745, 10%);
+            }
+          }
+          
+          .card-section-title {
+            margin-top: 1rem;
+            font-size: 14px;
+            color: #666;
+          }
+          
+          .card-features {
+            list-style: none;
+            padding-left: 0;
+            color: #6E6E6E;
+            font-size: 14px;
+            
+            li {
+              margin-bottom: 0.5rem;
+              
+              &:before {
+                content: "✓ ";
+                color: #28a745;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  
+  // Video modal styles
+  .video-modal {
+    :global(.ant-modal-content) {
+      max-width: 800px;
+      margin: 0 auto;
+      width: 100%;
+    }
+    
+    .modal-video {
+      width: 100%;
+      max-height: 500px;
+      object-fit: contain;
+    }
+  }
+  
+  // Responsive styles specifically for mobile
+  @media (max-width: 767px) {
+    .course-tabs {
+      :global(.ant-tabs-tab) {
+        padding: 8px 12px;
+        margin-right: 8px;
+        margin-bottom: 8px;
+      }
+    }
+    
+    .lecture-item {
+      padding: 10px !important;
+    }
+  }

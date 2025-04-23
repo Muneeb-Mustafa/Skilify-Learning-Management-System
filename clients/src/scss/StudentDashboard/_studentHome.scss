@@ -1,0 +1,249 @@
+.student-home {
+  padding: 16px;
+  background: #f5f7fa;
+  font-family: 'Arial', sans-serif;
+  min-height: 100vh;
+}
+
+.dashboard-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  width: 100%;
+  padding: 0 8px;
+}
+
+.stats-section {
+  margin-bottom: 24px;
+}
+
+.stat-card {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 12px;
+  transition: all 0.3s ease;
+}
+
+.charts-section {
+  margin-bottom: 32px;
+}
+
+.chart-card {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 12px;
+}
+
+.chart-card h3 {
+  font-size: clamp(16px, 4vw, 18px);
+  color: #333;
+  margin: 0 0 8px 0;
+}
+
+.chart-card p {
+  font-size: clamp(12px, 3vw, 14px);
+  color: #666;
+  margin: 0 0 12px 0;
+}
+
+.section-title {
+  font-size: clamp(20px, 5vw, 24px);
+  color: #333;
+  margin-bottom: 16px;
+  font-weight: 600;
+}
+
+.learning-activity {
+  background: #fff;
+  border-radius: 8px;
+  padding: 16px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 24px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.filters {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.course-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 16px;
+}
+
+.course-item {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 12px;
+  transition: transform 0.2s ease;
+}
+
+.course-item:hover {
+  transform: translateY(-5px);
+}
+
+.course-content {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.course-image {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 4px;
+  flex-shrink: 0;
+}
+
+.course-details {
+  flex: 1;
+  min-width: 0;
+}
+
+.course-title {
+  font-size: clamp(14px, 3.5vw, 16px);
+  color: #333;
+  margin: 0 0 6px 0;
+  font-weight: 500;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.course-description {
+  font-size: clamp(12px, 3vw, 14px);
+  color: #666;
+  margin: 0 0 10px 0;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.progress-container {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  width: 100%;
+}
+
+.progress-text {
+  font-size: clamp(10px, 2.5vw, 12px);
+  color: #666;
+}
+
+.action-button {
+  background-color: #007bff;
+  border-color: #007bff;
+  font-size: clamp(12px, 3vw, 14px);
+  padding: 4px 10px;
+  white-space: nowrap;
+}
+
+.action-button.certificate {
+  background-color: #28a745;
+  border-color: #28a745;
+  color: #fff;
+}
+
+.back-link {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #333;
+  font-size: clamp(14px, 3.5vw, 16px);
+  text-decoration: none;
+  margin-top: 16px;
+  transition: color 0.3s;
+}
+
+.back-link:hover {
+  color: #007bff;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .course-list {
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .stats-section, .charts-section {
+    margin-bottom: 16px;
+  }
+
+  .stats-section .ant-col, .charts-section .ant-col {
+    width: 100%;
+    margin-bottom: 12px;
+  }
+
+  .course-list {
+    grid-template-columns: 1fr;
+  }
+
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .filters {
+    width: 100%;
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .filters .ant-input-search,
+  .filters .ant-select {
+    width: 100% !important;
+  }
+
+  .course-content {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .course-image {
+    width: 100%;
+    height: auto;
+    max-width: 120px;
+  }
+}
+
+@media (max-width: 480px) {
+  .student-home {
+    padding: 8px;
+  }
+
+  .stat-card, .chart-card, .learning-activity {
+    padding: 8px;
+  }
+
+  .course-item {
+    padding: 8px;
+  }
+
+  .action-button {
+    width: 100%;
+    text-align: center;
+  }
+
+  .back-link {
+    margin-top: 8px;
+  }
+}

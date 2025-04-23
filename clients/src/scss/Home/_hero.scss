@@ -1,0 +1,108 @@
+.hero-home {
+  background-color: #1C1E53; /* Dark blue background */
+  color: white;
+  min-height: 100vh; /* Use min-height instead of height for better responsiveness */
+  padding-left: 120px !important;
+  padding-right: 20px !important;
+  display: flex;
+  flex-wrap: wrap; /* Allow wrapping for mobile */
+}
+
+.hero-home h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin: 0;
+  padding-right: 20px;
+}
+
+.hero-home p {
+  margin: 1rem 0 2rem 0;
+  font-size: 1.25rem;
+  line-height: 1.6;
+}
+
+.hero-home img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Responsive adjustments */
+@media (max-width: 767px) {
+  .hero-home {
+      padding-left: 20px !important; /* Reduce padding on mobile */
+      padding-right: 20px !important;
+      text-align: center; /* Center text on mobile */
+      min-height: auto; /* Allow height to adjust naturally */
+  }
+
+  .hero-home h1 {
+      font-size: 1.8rem; /* Smaller headline for mobile */
+  }
+
+  .hero-home p {
+      font-size: 1rem; /* Smaller paragraph text */
+      margin: 0.5rem 0 1.5rem 0;
+  }
+
+  .hero-home .d-flex {
+      flex-direction: column; /* Stack buttons vertically */
+      align-items: center;
+      justify-content: center;
+  }
+
+  .hero-home .btn {
+      width: 100%; /* Full width buttons on mobile */
+      margin-bottom: 1rem; /* Space between buttons */
+  }
+
+  .hero-home img {
+      margin-top: 2rem; /* Space above image on mobile */
+      display: none;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .hero-home {
+      padding-left: 40px !important; /* Moderate padding for tablets */
+      padding-right: 40px !important;
+      min-height: auto;
+  }
+
+  .hero-home h1 {
+      font-size: 2.2rem; /* Slightly smaller headline for tablets */
+  }
+
+  .hero-home p {
+      font-size: 1.1rem; /* Adjusted paragraph text */
+  }
+
+  .hero-home .d-flex {
+      flex-direction: column; /* Stack buttons on tablets */
+      align-items: center;
+  }
+
+  .hero-home .btn {
+      width: 80%; /* Slightly narrower buttons */
+      margin-bottom: 1rem;
+  }
+
+  .hero-home img {
+      margin-top: 1.5rem; /* Space above image */
+  }
+}
+
+@media (min-width: 992px) {
+  .hero-home {
+      min-height: 100vh; /* Restore full height on desktop */
+  }
+
+  .hero-home .d-flex {
+      flex-direction: row; /* Horizontal buttons on desktop */
+      align-items: center;
+      justify-content: start;
+  }
+
+  .hero-home .btn {
+      width: auto; /* Reset button width */
+  }
+}

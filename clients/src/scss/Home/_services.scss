@@ -1,0 +1,36 @@
+.cards {
+    background-color: #F4F6FC;
+    border-radius: 10px;
+    padding: 20px;
+    height: auto;  
+    width: 100%; 
+}
+
+/* Make it responsive for mobile devices */
+@media (max-width: 768px) { 
+    .pt-5{
+        padding: 10px;
+    }
+    .pb-5{
+        padding: 10px;
+    }
+    .row {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 0px 20px;
+    }
+
+    .cards { 
+        padding: 0px 20px !important;  
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .cards p {
+        font-size: 16px;
+    }
+}
+
+

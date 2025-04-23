@@ -1,0 +1,209 @@
+.admin-dashboard {
+    padding: 1rem;
+    background-color: #f5f5f5;
+    min-height: 100vh;
+    
+    // Stats cards row
+    .stats-cards {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+      
+      .stat-card {
+        flex: 1;
+        min-width: 220px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+        
+        // On mobile, make cards full width
+        @media (max-width: 767px) {
+          flex-basis: 100%;
+        }
+        
+        // Custom styles for stat numbers
+        :global(.ant-statistic-title) {
+          font-size: 16px;
+          font-weight: 500;
+        }
+        
+        :global(.ant-statistic-content) {
+          font-size: 24px;
+          font-weight: 600;
+        }
+      }
+    }
+    
+    // Charts row
+    .charts-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+      
+      .chart-card {
+        flex: 1;
+        min-width: 300px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+        
+        // On mobile, make charts full width
+        @media (max-width: 991px) {
+          flex-basis: 100%;
+        }
+        
+        :global(.ant-card-head-title) {
+          font-size: 16px;
+          font-weight: 500;
+        }
+        
+        // Fixed height chart wrapper
+        .chart-wrapper {
+          position: relative;
+          height: 300px; /* Fixed height is important */
+          width: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          
+          .chart-spinner {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+          }
+          
+          // Ensure canvas takes full height of wrapper
+          canvas {
+            max-width: 100%;
+            max-height: 100%;
+          }
+        }
+      }
+    }
+    
+    // Courses and actions row
+    .courses-actions-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+      
+      .courses-container {
+        flex: 2;
+        min-width: 300px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+        
+        // On mobile, make table container full width
+        @media (max-width: 991px) {
+          flex-basis: 100%;
+        }
+        
+        :global(.ant-card-head-title) {
+          font-size: 16px;
+          font-weight: 500;
+        }
+        
+        // Responsive table
+        :global(.ant-table) {
+          overflow-x: auto;
+          
+          th, td {
+            white-space: nowrap;
+            padding: 8px 12px;
+            
+            @media (max-width: 576px) {
+              padding: 8px 4px;
+              font-size: 14px;
+            }
+          }
+        }
+        
+        // Responsive pagination
+        .table-pagination {
+          text-align: center;
+          margin-top: 1rem;
+          
+          @media (max-width: 576px) {
+            :global(.ant-pagination-item),
+            :global(.ant-pagination-prev),
+            :global(.ant-pagination-next) {
+              min-width: 28px;
+              height: 28px;
+              line-height: 28px;
+              
+              a {
+                padding: 0 6px;
+              }
+            }
+          }
+        }
+      }
+      
+      .actions-container {
+        flex: 1;
+        min-width: 220px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+        
+        // On mobile, make actions container full width
+        @media (max-width: 991px) {
+          flex-basis: 100%;
+        }
+        
+        :global(.ant-card-head-title) {
+          font-size: 16px;
+          font-weight: 500;
+        }
+        
+        .actions-list {
+          display: flex;
+          flex-direction: column;
+          gap: 1rem;
+          
+          button {
+            height: 40px;
+            font-size: 15px;
+            
+            @media (max-width: 576px) {
+              height: 36px;
+              font-size: 14px;
+            }
+          }
+        }
+      }
+    }
+    
+    // Back to home link
+    .back-link {
+      display: flex;
+      align-items: center;
+      margin-top: 1rem;
+      color: #333;
+      text-decoration: none;
+      font-size: 16px;
+      gap: 0.5rem;
+      
+      &:hover {
+        color: #1890ff;
+      }
+      
+      svg {
+        margin-right: 0.5rem;
+      }
+    }
+  }
+  
+  // Mobile optimizations for cards
+  @media (max-width: 576px) {
+    :global(.ant-card-body) {
+      padding: 12px;
+    }
+    
+    :global(.ant-card-head) {
+      padding: 0 12px;
+      min-height: 40px;
+    }
+    
+    :global(.ant-card-head-title) {
+      padding: 12px 0;
+      font-size: 15px;
+    }
+  }

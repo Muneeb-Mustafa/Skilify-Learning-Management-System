@@ -1,0 +1,134 @@
+ $warning: #FF0000;
+
+// Import Bootstrap with overrides (if not already handled in _bootstrap.scss)
+@use "./scss/bootstrap" as bootstrap;
+
+// Import other SCSS modules
+@use "./scss/Header/header" as header;
+@use "./scss/Footer/Footer" as footer;
+// Home SCSS Styling
+@use "./scss/Home/hero" as hero;
+@use "./scss/Home/analytics" as analytics;
+@use "./scss/Home/services" as services;
+@use "./scss/Home/section4" as section4;
+@use "./scss/Home/RecommendedCourses" as RecommendedCourses;
+@use "./scss/Home/testimonial" as testimonial;
+@use "./scss/Home/faq" as faq;
+@use "./scss/Home/myform" as myform;
+@use "./scss/Profile/profile" as profile;
+@use "./scss/Home/blog" as blog;
+@use "./scss/Home/termsofservice" as termsofservice;
+@use "./scss/Home/privacypolicy" as privacypolicy;
+@use "./scss/Home/pageNotFound" as pageNotFound;
+
+// Auth SCSS Styling
+@use "./scss/Auth/register" as register;
+@use "./scss/Auth/login" as login;
+@use "./scss/Auth/forgotpassword" as forgotpassword;
+
+// Dashboard Sidebar SCSS Styling
+@use "./scss/Dashboard/_sidebar" as sidebar;
+
+// Instructor Sidebar SCSS Styling
+@use "./scss/Instructor/_dashboardHome" as dashboardHome; 
+@use "./scss/Instructor/_instructorcourses" as instructorcourses;
+@use "./scss/Instructor/instructorStudents" as instructorStudents;
+
+// Student Sidebar SCSS Styling
+@use "./scss/StudentDashboard/_studentSidebar" as studentSidebar;
+
+
+// Courses SCSS Styling
+@use "./scss/Courses/courses" as courses;
+
+// Student Dashboard SCSS Styling
+@use "./scss/StudentDashboard/studentHome" as studentHome; 
+@use "./scss/StudentDashboard/enrollments" as enrollments;
+@use "./scss/StudentDashboard/CourseDetail" as CourseDetail;
+
+// Admin Dashboard SCSS Styling
+@use "./scss/Admin/adminHome" as adminHome;
+
+// Global styles
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
+}
+
+body {
+  overflow-x: hidden;
+  font-family: "Poppins", sans-serif;
+}
+
+footer {
+  margin-top: auto;
+}
+
+.accordion-button::after {
+  flex-shrink: 0;
+  width: 0;
+  height: 0;
+  margin-left: 0px;
+  content: "";
+  background-image: var(--bs-accordion-btn-icon);
+  background-repeat: no-repeat;
+  background-size: var(--bs-accordion-btn-icon-width);
+  transition: var(--bs-accordion-btn-icon-transition);
+}
+
+.text-section h2 {
+  color: #fff;
+}
+
+// Override AntD Input placeholder color globally
+.ant-input {
+  &::placeholder {
+    color: black !important; // Set placeholder color to black
+    opacity: 1; // Ensure full opacity for visibility
+  }
+
+  &::-webkit-input-placeholder {
+    color: black !important; // For Webkit browsers (Chrome, Safari)
+    opacity: 1;
+  }
+
+  &::-moz-placeholder {
+    color: black !important; // For Firefox
+    opacity: 1;
+  }
+
+  &:-ms-input-placeholder {
+    color: black !important; // For Internet Explorer
+    opacity: 1;
+  }
+}
+
+// If you're using the Search variant specifically
+.ant-input-search {
+  .ant-input {
+    &::placeholder {
+      color: black !important;
+      opacity: 1;
+    }
+
+    &::-webkit-input-placeholder {
+      color: black !important;
+      opacity: 1;
+    }
+
+    &::-moz-placeholder {
+      color: black !important;
+      opacity: 1;
+    }
+
+    &:-ms-input-placeholder {
+      color: black !important;
+      opacity: 1;
+    }
+  }
+}

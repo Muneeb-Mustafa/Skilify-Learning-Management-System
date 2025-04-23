@@ -1,0 +1,5 @@
+// _bootstrap.scss
+@use "../../node_modules/bootstrap/scss/bootstrap" as bootstrap with (
+  $primary: #ECEFF1,
+  $danger: #ffc300
+);

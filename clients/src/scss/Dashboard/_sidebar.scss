@@ -1,0 +1,19 @@
+.custom-sider {
+    position: relative;
+  }
+  
+  /* Hide the bottom collapse button on mobile (screens smaller than 992px) */
+  @media (max-width: 991px) {
+    .custom-sider .ant-layout-sider-trigger {
+      display: none !important; /* Hides the bottom collapse button */
+    }
+  }
+  
+  /* Ensure the bottom collapse button is visible on larger screens */
+  @media (min-width: 992px) {
+    .custom-sider .ant-layout-sider-trigger {
+      display: block !important; /* Shows the bottom collapse button */
+      background: #001529; /* Match sidebar background */
+      color: #fff;
+    }
+  }

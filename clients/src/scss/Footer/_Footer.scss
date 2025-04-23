@@ -1,0 +1,69 @@
+.contact {
+    border-radius: 5px 5px 0 0;
+    background-color: #FCD980;
+    margin-top: 80px;
+    margin-bottom: -25px;
+}
+
+.text-1 {
+    font-size: 15px;
+}
+
+.text-2 {
+    font-size: 15px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 767px) {
+    .contact {
+        margin-top: 40px; /* Reduced margin for mobile */
+        margin-bottom: -15px; /* Adjusted for smaller screens */
+    }
+
+    .contact .col-12 {
+        text-align: center; /* Center align contact info on mobile */
+    }
+
+    .text-1, .text-2 {
+        font-size: 14px; /* Slightly smaller text for mobile */
+    }
+
+    .col-xs-6 {
+        width: 50%; /* Ensure two columns fit on mobile */
+        padding: 0 10px; /* Add padding for better spacing */
+    }
+
+    .row .col-md-6 {
+        margin-bottom: 1rem; /* Consistent spacing between columns */
+    }
+
+    .nav-link {
+        display: block; /* Ensure nav links stack properly */
+        padding: 0.5rem 0; /* Adjust padding for mobile */
+    }
+    .links{
+        display: none;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .contact {
+        margin-top: 60px; /* Adjusted for tablets */
+        margin-bottom: -20px;
+    }
+
+    .col-md-6 {
+        flex: 0 0 50%; /* Ensure two columns on tablet */
+        max-width: 50%;
+    }
+
+    .text-1, .text-2 {
+        font-size: 14.5px; /* Slight adjustment for tablet */
+    }
+}
+
+@media (min-width: 992px) {
+    .contact .col-md-6 {
+        text-align: left; /* Reset to left align on desktop */
+    }
+}

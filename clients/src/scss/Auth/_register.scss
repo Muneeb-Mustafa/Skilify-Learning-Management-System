@@ -1,0 +1,134 @@
+/* General container styling */
+.min-vh-100 {
+  background-color: #f8f9fa;
+}
+
+/* Background section */
+.bg-register {
+  position: relative;
+  background-image: url('../../../public/Images/Auth/register.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 50vh; /* Reduced for mobile */
+  color: #fff;
+}
+
+.bg-register::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(59, 61, 118, 0.559);
+  z-index: 1;
+}
+
+/* Text section */
+.text-section {
+  z-index: 2;
+  text-align: left;
+}
+
+.text-section h2 {
+  font-size: 2rem; /* Default for mobile */
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.2;
+}
+
+.text-section p {
+  color: #fff;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Form section */
+.form-section {
+  background-color: #1c1e53;
+}
+
+/* Custom input styling */
+.custom-input {
+  background: transparent !important;
+  border-color: #f4f6fc !important;
+  color: #fff !important;
+  padding: 12px !important;
+}
+
+.custom-input::placeholder,
+.ant-input::placeholder,
+.ant-input-password .ant-input::placeholder {
+  color: #f4f6fc !important;
+}
+
+/* Responsive adjustments */
+@media (max-width: 576px) {
+  .bg-register {
+    min-height: 40vh;
+    padding: 1.5rem !important;
+  }
+
+  .text-section {
+    padding-right: 20px!important;
+  }
+
+  .text-section h2 {
+    font-size: 1.5rem;
+  }
+
+  .text-section p {
+    font-size: 0.9rem;
+  }
+
+  .form-section {
+    padding: 1.5rem !important;
+  }
+
+  .btn {
+    font-size: 0.9rem;
+    padding: 0.5rem 1rem;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 768px) {
+  .text-section h2 {
+    font-size: 1.75rem;
+  }
+
+  .form-section {
+    padding: 2rem !important;
+  }
+}
+
+@media (min-width: 768px) {
+  .bg-register {
+    min-height: 100vh;
+  }
+
+  .text-section h2 {
+    font-size: 2.5rem;
+  }
+
+  .text-section {
+    padding-right: 80px;
+  }
+
+  .form-section {
+    padding-right: 60px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .text-section h2 {
+    font-size: 2.75rem;
+    line-height: 50px;
+  }
+
+  .text-section {
+    padding-right: 120px;
+  }
+
+  .form-section {
+    padding-right: 80px;
+  }
+}

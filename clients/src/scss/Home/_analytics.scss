@@ -1,0 +1,89 @@
+.analytics1 {
+    background-color: #EEF4FA;
+    padding: 0px 100px !important;
+}
+
+.logo-img {
+    max-height: 50px; /* Maintain max height as in the original code */
+    margin: 0 10px 15px 10px; /* Consistent spacing around logos */
+}
+
+/* Responsive adjustments */
+@media (max-width: 767px) {
+    .analytics1 {
+        padding: 0px 20px !important; 
+    }
+
+    .col-12 .row {
+        display: flex;
+        flex-direction: row; 
+        justify-content: center;
+        gap: 0px;  
+        flex-wrap: wrap; 
+    }
+
+    .col-4 {
+        flex: 0 0 auto;
+        width: auto; /* Allow columns to take necessary width */
+        text-align: center;
+    }
+
+    h4 {
+        font-size: 1.3rem; /* Adjust font size */
+    }
+
+    p {
+        font-size: 0.9rem;
+    }
+}
+
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .analytics1 {
+        padding: 0px 40px !important; /* Moderate padding for tablets */
+    }
+
+    .col-4 {
+        text-align: center; /* Center align stats on tablets */
+    }
+
+    .d-flex {
+        flex-direction: row; /* Keep logos in a row on tablets */
+        flex-wrap: wrap; /* Allow wrapping */
+        justify-content: center; /* Center logos */
+        gap: 15px; /* Consistent spacing */
+    }
+
+    .logo-img {
+        max-height: 45px; /* Slightly larger logos for tablets */
+    }
+
+    h4 {
+        font-size: 2rem; /* Slightly smaller headings for tablets */
+    }
+
+    p {
+        font-size: 1rem; /* Adjusted text size */
+    }
+}
+
+@media (min-width: 992px) {
+    .analytics   {
+        justify-content: end; /* Align logos to the right on desktop */
+        flex-direction: row; /* Ensure logos are in a row */
+        flex-wrap: nowrap; /* Prevent wrapping on desktop */
+        gap: 15px; /* Consistent spacing */
+    }
+
+    .logo-img {
+        margin: 0; /* Remove individual margins */
+    }
+
+    h4 {
+        font-size: 2.5rem; /* Restore original heading size */
+    }
+
+    p {
+        font-size: 1.25rem; /* Restore original text size */
+    }
+}

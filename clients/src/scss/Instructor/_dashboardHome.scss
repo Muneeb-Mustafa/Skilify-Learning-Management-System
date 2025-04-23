@@ -1,0 +1,23 @@
+@media (max-width: 768px) {
+    .ant-card {
+      margin-bottom: 16px;
+    }
+    .ant-table {
+      font-size: 14px;
+    }
+    .ant-btn {
+      width: 100%;
+      margin-bottom: 8px;
+    }
+    .ant-statistic-content {
+      font-size: 16px;
+    }
+    /* Ensure charts are responsive */
+    .ant-card-body {
+      overflow-x: auto;
+    }
+    canvas {
+      max-width: 100% !important;
+      height: auto !important;
+    }
+  }
